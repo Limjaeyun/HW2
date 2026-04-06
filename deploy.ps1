@@ -3,8 +3,11 @@ Write-Host "Deploying AI PDF Pipeline via Docker Windows CLI..." -ForegroundColo
 
 # 1. 기존 동작중인 로컬 컨테이너 중지 및 삭제 (ErrorAction=SilentlyContinue로 없는 컨테이너 에러 무시)
 Write-Host "Stopping and removing existing containers..."
-docker stop pdf_pipeline_container 2>$null
-docker rm pdf_pipeline_container 2>$null
+$existing_container = docker ps -a -q -f name="pdf_pipeline_container"
+if ($existing_container) {
+    docker stop pdf_pipeline_container
+    docker rm pdf_pipeline_container
+}
 
 # 2. 새로운 Docker 이미지 빌드
 Write-Host "Building Docker Image..." -ForegroundColor Yellow
