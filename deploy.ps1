@@ -20,6 +20,6 @@ if ($LASTEXITCODE -ne 0) {
 
 # 3. 새로운 컨테이너 백그라운드 실행
 Write-Host "Starting new container..." -ForegroundColor Yellow
-docker run -d --restart unless-stopped --name pdf_pipeline_container -p 8000:8000 pdf_pipeline_image
+docker run -d --restart unless-stopped --name pdf_pipeline_container -p 8080:8000 pdf_pipeline_image
 
-Write-Host "Deployment Complete! Server is alive at http://localhost:8000" -ForegroundColor Cyan
+Write-Host "Deployment Complete! Server is alive at http://localhost:8080" -ForegroundColor Cyan
