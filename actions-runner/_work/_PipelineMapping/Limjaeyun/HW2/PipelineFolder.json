@@ -1,0 +1,12 @@
+﻿{
+  "repositoryName": "Limjaeyun/HW2",
+  "pipelineDirectory": "HW2",
+  "workspaceDirectory": "HW2\\HW2",
+  "repositories": {
+    "Limjaeyun/HW2": {
+      "repositoryPath": "HW2\\HW2",
+      "lastRunOn": "04/06/2026 15:19:22 +09:00"
+    }
+  },
+  "lastRunOn": "04/06/2026 15:19:22 +09:00"
+}
