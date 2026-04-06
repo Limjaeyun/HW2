@@ -1,0 +1,183 @@
+﻿docker : #0 building with 
+"desktop-linux" instance u
+sing docker driver
+위치 줄:1 문자:1
++ docker build -t essay-pd
+f-server . --progress=plai
+n > build.log 2>&1
++ ~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~
+    + CategoryInfo        
+      : NotSpecified: (#  
+  0 building wit...g do   
+ cker driver:String) [    
+], RemoteException
+    + FullyQualifiedError 
+   Id : NativeCommandErr  
+  or
+ 
+
+#1 [internal] load build d
+efinition from Dockerfile
+#1 transferring dockerfile
+: 830B 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load metadat
+a for docker.io/library/py
+thon:3.11-slim
+#2 DONE 0.8s
+
+#3 [internal] load .docker
+ignore
+#3 transferring context: 2
+B done
+#3 DONE 0.0s
+
+#4 [1/6] FROM docker.io/li
+brary/python:3.11-slim@sha
+256:9358444059ed78e2975ada
+2c189f1c1a3144a5dab6f35bff
+8c981afb38946634
+#4 resolve docker.io/libra
+ry/python:3.11-slim@sha256
+:9358444059ed78e2975ada2c1
+89f1c1a3144a5dab6f35bff8c9
+81afb38946634 0.0s done
+#4 CACHED
+
+#5 [internal] load build c
+ontext
+#5 transferring context: 1
+.85kB 0.0s done
+#5 DONE 0.1s
+
+#6 [2/6] RUN apt-get updat
+e && apt-get install -y   
+  tesseract-ocr     tesser
+act-ocr-kor     libtessera
+ct-dev     libgl1-mesa-glx
+     libglib2.0-0     && r
+m -rf /var/lib/apt/lists/*
+#6 0.376 Hit:1 http://deb.
+debian.org/debian trixie I
+nRelease
+#6 0.376 Get:2 http://deb.
+debian.org/debian trixie-u
+pdates InRelease [47.3 kB]
+#6 0.384 Get:3 http://deb.
+debian.org/debian-security
+ trixie-security InRelease
+ [43.4 kB]
+#6 0.411 Get:4 http://deb.
+debian.org/debian trixie/m
+ain amd64 Packages [9671 k
+B]
+#6 2.590 Get:5 http://deb.
+debian.org/debian trixie-u
+pdates/main amd64 Packages
+ [5412 B]
+#6 2.590 Get:6 http://deb.
+debian.org/debian-security
+ trixie-security/main amd6
+4 Packages [119 kB]
+#6 3.562 Fetched 9886 kB i
+n 3s (3053 kB/s)
+#6 3.562 Reading package l
+ists...
+#6 4.575 Reading package l
+ists...
+#6 5.463 Building dependen
+cy tree...
+#6 5.705 Reading state inf
+ormation...
+#6 5.738 Package libgl1-me
+sa-glx is not available, b
+ut is referred to by anoth
+er package.
+#6 5.738 This may mean tha
+t the package is missing, 
+has been obsoleted, or
+#6 5.738 is only available
+ from another source
+#6 5.738 
+#6 5.742 E: Package 'libgl
+1-mesa-glx' has no install
+ation candidate
+#6 ERROR: process "/bin/sh
+ -c apt-get update && apt-
+get install -y     tessera
+ct-ocr     tesseract-ocr-k
+or     libtesseract-dev   
+  libgl1-mesa-glx     libg
+lib2.0-0     && rm -rf /va
+r/lib/apt/lists/*" did not
+ complete successfully: ex
+it code: 100
+------
+ > [2/6] RUN apt-get updat
+e && apt-get install -y   
+  tesseract-ocr     tesser
+act-ocr-kor     libtessera
+ct-dev     libgl1-mesa-glx
+     libglib2.0-0     && r
+m -rf /var/lib/apt/lists/*
+:
+2.590 Get:5 http://deb.deb
+ian.org/debian trixie-upda
+tes/main amd64 Packages [5
+412 B]
+2.590 Get:6 http://deb.deb
+ian.org/debian-security tr
+ixie-security/main amd64 P
+ackages [119 kB]
+
+
+
+5.738 Package libgl1-mesa-
+glx is not available, but 
+is referred to by another 
+package.
+5.738 This may mean that t
+he package is missing, has
+ been obsoleted, or
+5.738 is only available fr
+om another source
+5.738 
+5.742 E: Package 'libgl1-m
+esa-glx' has no installati
+on candidate
+------
+Dockerfile:8
+--------------------
+   7 |     # libgl1-mesa-g
+lx, libglib2.0-0: OpenCV ?
+쇱씠釉뚮윭由ъ슜 ?쒖뒪??醫낆냽??   8 | 
+>>> RUN apt-get update && 
+apt-get install -y \
+   9 | >>>     tesseract-o
+cr \
+  10 | >>>     tesseract-o
+cr-kor \
+  11 | >>>     libtesserac
+t-dev \
+  12 | >>>     libgl1-mesa
+-glx \
+  13 | >>>     libglib2.0-
+0 \
+  14 | >>>     && rm -rf /
+var/lib/apt/lists/*
+  15 |     
+--------------------
+ERROR: failed to build: fa
+iled to solve: process "/b
+in/sh -c apt-get update &&
+ apt-get install -y     te
+sseract-ocr     tesseract-
+ocr-kor     libtesseract-d
+ev     libgl1-mesa-glx    
+ libglib2.0-0     && rm -r
+f /var/lib/apt/lists/*" di
+d not complete successfull
+y: exit code: 100

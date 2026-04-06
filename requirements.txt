@@ -1,0 +1,8 @@
+fastapi[standard]==0.111.0
+uvicorn==0.29.0
+pymupdf==1.24.2
+opencv-python-headless==4.9.0.80
+pytesseract==0.3.10
+numpy<2.0.0
+python-multipart==0.0.9
+easyocr==1.7.1
